@@ -60,6 +60,7 @@ export const Links = styled.div`
 `;
 
 export const PostsWrapper = styled.div`
+  margin-top: 30px;
   overflow-x: hidden;
   overflow-y: scroll;
   padding-bottom: 30px;

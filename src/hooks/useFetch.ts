@@ -1,22 +1,28 @@
-import { useQuery } from "react-query";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 import PostsDTO from "../components/list/posts.dto";
 
-const getPosts = async (): Promise<PostsDTO[] | undefined> => {
-  try {
-    const { data } = await axios.get(
-      "https://dev.to/api/articles?username=franciscomendes10866"
-    );
-    return data;
-  } catch (err) {
-    console.error(err);
-  }
+type Result = {
+  data: PostsDTO[];
 };
 
-const useFetch = (): PostsDTO[] => {
-  const { data } = useQuery("posts", getPosts);
-  return data as PostsDTO[];
+const useFetch = (): Result => {
+  const [data, setData] = useState<PostsDTO[]>([]);
+  useEffect(() => {
+    const getPosts = async () => {
+      try {
+        const { data } = await axios.get(
+          "https://dev.to/api/articles?username=franciscomendes10866"
+        );
+        setData(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getPosts();
+  }, []);
+  return { data };
 };
 
 export default useFetch;

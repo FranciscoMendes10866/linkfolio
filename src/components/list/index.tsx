@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 
 const List: React.FC = () => {
   const { isLinks } = useStore();
-  const data = useFetch();
+  const { data } = useFetch();
   return (
     <>
       {isLinks ? (
