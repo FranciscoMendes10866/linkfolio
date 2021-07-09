@@ -8,7 +8,6 @@ const Tabs: React.FC = () => {
   const handleOnClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsLinks(!isLinks);
-    console.log(isLinks);
   };
   return (
     <Menu>

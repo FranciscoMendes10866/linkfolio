@@ -1,9 +1,9 @@
-import React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query'
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-import { ME, Tabs, List } from './components'
+import { ME, Tabs, List } from "./components";
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 const App: React.FC = () => {
   return (
@@ -13,6 +13,6 @@ const App: React.FC = () => {
       <List />
     </QueryClientProvider>
   );
-}
- 
+};
+
 export default App;
