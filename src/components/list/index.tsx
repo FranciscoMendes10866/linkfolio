@@ -12,6 +12,10 @@ const List: React.FC = () => {
       {isLinks ? (
           <LinksWrapper>
           <Links>
+            <a href="https://fmendes.vercel.app/" target="_blank">
+              <i className='bx bxs-cookie'></i>
+              <span>Website</span>
+            </a>
             <a href="https://github.com/FranciscoMendes10866" target="_blank">
               <i className="bx bxl-github"></i>
               <span>Github</span>
@@ -21,7 +25,7 @@ const List: React.FC = () => {
               <span>DEV</span>
             </a>
             <a href="https://www.instagram.com/__.fmendes.__/" target="_blank">
-             <i className='bx bxl-instagram'></i>
+              <i className='bx bxl-instagram-alt' ></i>
               <span>Instagram</span>
             </a>
             <a href="https://www.youtube.com/channel/UCO6Altk1_udQFrUc62YjN_A" target="_blank">
