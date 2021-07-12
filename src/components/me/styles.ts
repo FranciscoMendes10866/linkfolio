@@ -27,7 +27,7 @@ export const Description = styled.div`
   }
   p {
     margin-top: 6px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.6;
     padding: 6px 10px;
   }
